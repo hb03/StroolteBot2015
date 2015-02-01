@@ -4,7 +4,7 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:StroolteBot2015"
         xmlns:utm="clr-namespace:UltimateTeam.Toolkit.Models;assembly=UltimateTeam.Toolkit"
-        Title="MainWindow" Height="762" Width="1024">
+        Title="MainWindow" Height="762" Width="1024" Closing="Window_Closing">
 
     <Window.Resources>
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
@@ -14,7 +14,7 @@
         </ObjectDataProvider>
     </Window.Resources>
 
-    <Grid Margin="0,0,0,0">
+    <Grid Margin="0,0,0,0" Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="2*" />
@@ -38,6 +38,7 @@
                 <DataGridTextColumn Header="Coins" Binding="{Binding Path=Coins}"/>
             </DataGrid.Columns>
         </DataGrid>
-        
+        <Button Content="Login" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="25" Click="Button_Click_1" />
+
     </Grid>
 </Window>
